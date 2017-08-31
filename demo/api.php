@@ -1,12 +1,17 @@
 <?php
 
-
-
-$max = 1;
-for($i=0;$i<$cnt;$i++){
- echo '123';
+ function  test(){
 
 }
+
+$max = 1;
+for($i=0;$i<$cnt;$i++) {
+    echo '123';
+}
+
+
+
+
 
 
 
