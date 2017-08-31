@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/demo/db_class/config.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/db_class/sina.php" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/demo/match.php" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

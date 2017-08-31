@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="输入提示，自动补全,jquery" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<title>jQuery+PHP+Mysql实现输入自动完成提示的功能</title>
+<link rel="stylesheet" type="text/css" href="/main.css" />
+<link rel="stylesheet" href="jquery.ui.autocomplete.css">
+<style type="text/css">
+#demo{width:500px; height:40px; line-height:40px; margin:20px auto}
+input{border:1px solid #ccc; width:360px; height:26px; line-height:26px; padding:2px; font-size:14px; color:#666}
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.core.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="ui/jquery.ui.autocomplete.js"></script>
+<script type="text/javascript">
+$(function(){
+	$( "#key" ).autocomplete({
+		source: "search.php",
+		minLength: 2,
+		autoFocus: true
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+
+<div id="main">
+  <h2 class="top_title"><a href="http://www.helloweba.com/view-blog-145.html">jQuery+PHP+Mysql实现输入自动完成提示的功能</a></h2>
+  <p style="height:32px; line-height:32px; margin-top:40px; padding-left:200px">分别输入英文关键词“jQuery”和中文关键词“使用”看看效果：</p>
+  <div id="demo">
+    <input type="text" id="key" name="key" />
+  </div>
+     
+</div>
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+
+</body>
+</html>

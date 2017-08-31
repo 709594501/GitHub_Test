@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <title>菜鸟教程(runoob.com)</title>
+    <script>
+        function myFunction(){
+            var params =$('#fname').val();
+            //console.log(code);
+            $.ajax({
+                type: "get",
+                dataType: "json",
+                url: 'search.php',
+                data: '&code='+params,
+                success: function (data) {
+                    $("#code").empty();
+                    var length = data.length;
+                    if (length>0) {
+                        var i=0;
+
+                        var str='';
+                        for(i;i<length;i++){
+                            str  +='<a href='+data[i]['id']+'>'+data[i]['label']+'</a><br />';
+                            $("#code").css('display','block');
+                            $("#code").html(str);
+                        }
+
+
+                    }
+                }
+            });
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+<p>当用户在输入字段释放一个按键时触发函数。函数将字符转换为大写。</p>
+输入你的名称: <input type="text" id="fname" onkeyup="myFunction()">
+
+<span id="code" style="display:none;"></span>
+</body>
+</html>
